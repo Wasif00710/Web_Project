@@ -1,0 +1,42 @@
+name: Auto-merge branches into main
+
+on:
+  push:
+    branches:
+      - Wasif
+      - eva
+      - Dipa
+      - Durjoy
+
+jobs:
+  merge-to-main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout branch that triggered the workflow
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge current branch into main
+        run: |
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          echo "Merging branch $BRANCH_NAME into main"
+
+          # Make sure we have latest main
+          git fetch origin main
+          git checkout main
+          git pull origin main
+
+          # Merge the branch that triggered this workflow
+          git merge --no-ff "origin/$BRANCH_NAME" -m "Auto-merge $BRANCH_NAME into main"
+
+          # Push updated main
+          git push origin main
