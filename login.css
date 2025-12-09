@@ -7,6 +7,12 @@
     font-family: 'Times New Roman', sans-serif;
     background-color: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    color: #111827;
     background: url("https://thumbs.dreamstime.com/z/many-cats-pattern-pet-day-357810519.jpg?ct=jpeg");
     
 }
@@ -239,5 +245,3 @@ h1{
     font-family: 'Times New Roman', sans-serif;
     background: transparent !important;
 }
-
-
