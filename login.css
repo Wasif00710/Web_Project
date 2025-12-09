@@ -5,16 +5,21 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
-
-    background-image: url("https://thumbs.dreamstime.com/z/many-cats-pattern-pet-day-357810519.jpg");
-    background-size: cover;       /* stretch image to cover screen */
-    background-position: center;  /* center the image */
-    background-repeat: no-repeat; /* STOP repeating */
-
-
     color: #111827;
-    background: url("https://thumbs.dreamstime.com/z/many-cats-pattern-pet-day-357810519.jpg?ct=jpeg");
-    
+
+    /* Background IMAGE */
+    background: url("https://the15net.com/wp-content/uploads/2025/11/dreamstime_s_354477097.jpg") repeat-x;
+    background-size: auto 60%;  /* image height fits screen, width repeats */
+    background-position: 0 0;
+
+    /* Infinite smooth slide */
+    animation: slideBg 40s linear infinite;
+}
+
+/* Move background left → right infinitely with NO GAP */
+@keyframes slideBg {
+    0%   { background-position: 0 0; }
+    100% { background-position: 200% 0; }
 }
 
 /* keep normal document flow; center login box using section */
@@ -41,7 +46,33 @@ h1{
     margin: 20px auto;
     
 }
+.navbar-nav .nav-link {
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  color: #ff3500 !important;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  margin: 0 8px; /* spacing between buttons */
+}
 
+/* Hover Effect for all nav buttons */
+.navbar-nav .nav-link:hover {
+  background: #ff3500;
+  color: #ffffff !important;
+  border-color: #ff3500;
+}
+
+/* Active page (highlight the current page) */
+.navbar-nav .nav-link.active {
+  background: #d52b00;
+  color: #ffffff !important;
+  border-color: #ff3500;
+}
 /* Text & elements inside login container */
 .login-container p {
     font-size: 14px;
@@ -183,7 +214,7 @@ h1{
 .toggle {
     
     background-color: #512da8;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #2f62a4, #512da8);
     color: #fff;
     position: relative;
     left: -100%;
