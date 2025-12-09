@@ -26,6 +26,7 @@
 .header-area .main-header-area .logo {
     display: flex;
     align-items: center;
+    
 }
 
 /* smaller on mobile */
@@ -60,6 +61,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
+  
 }
 
 /* line 11, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_reset.scss */
