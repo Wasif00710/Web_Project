@@ -1,0 +1,67 @@
+/* ===== Login Page CSS ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #eef3ff;
+}
+
+.login-box {
+    width: 350px;
+    background: white;
+    padding: 25px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004bcc;
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.links a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
