@@ -5,11 +5,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+    background-image: url("https://thumbs.dreamstime.com/z/many-cats-pattern-pet-day-357810519.jpg");
+    background-size: cover;       /* stretch image to cover screen */
+    background-position: center;  /* center the image */
+    background-repeat: no-repeat; /* STOP repeating */
 
 
     color: #111827;
