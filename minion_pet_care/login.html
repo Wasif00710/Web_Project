@@ -22,52 +22,62 @@
 <body class="login-page">
 
     <!-- ========== HEADER ========== -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <!-- Logo + brand -->
-                <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                    <img src="../img/Logo.png" alt="Minion Pet Care Logo"
-                        style="height:70px; width:auto; border-radius:50%; margin-right:10px;">
-                    <span class="fw-bold">Minion Pet Care</span>
-                </a>
+      <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- Logo + brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/Logo.png" alt="Minion Pet Care Logo"
+            style="height:70px; width:auto; border-radius:50%; margin-right:10px;">
+          <span class="fw-bold">Minion Pet Care</span>
+        </a>
 
-                <!-- Mobile toggle button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <!-- Menu items -->
-                <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+        <!-- Menu items -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
-                                <li><a class="dropdown-item" href="../single-blog.html">Single Blog</a></li>
-                            </ul>
-                        </li>
+            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../elements.html">Elements</a></li>
-                            </ul>
-                        </li>
+            </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                <li><a class="dropdown-item" href="./shop.html">Pet Shop</a></li>
+                <li><a class="dropdown-item" href="./boarding.html">Pet Boarding</a></li>
+                <li><a class="dropdown-item" href="./trainer.html">Pet Trainer</a></li>
+                <li><a class="dropdown-item" href="ved.html">Pet Veterinarian</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-btn" href="./minion_pet_care/login.html">Login</a></li>
+            <button id="cartBtn" class="pill btn" aria-label="Open cart">🛒 Cart <span id="cartCount" class="badge"
+                aria-live="polite">0</span></button>
 
-                        <li class="nav-item"><a class="nav-link" href="../service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
     <!-- ========== LOGIN SECTION ========== -->
     <main class="login-main py-5">
