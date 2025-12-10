@@ -81,24 +81,26 @@
     font-family: 'Times New Roman', sans-serif;
     font-size: 32px;
     margin-bottom: 10px;
-    color: #35155D;
+    color: #000000;
 }
 
 .form-container.sign-in span {
-    font-size: 14px;
+    font-size: 16px;
     display: block;
     margin-bottom: 18px;
-    color: #333;
+    color: #ffffff;
+    text-align: center;
 }
 
 .form-container.sign-in form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .form-container.sign-in input {
-    background-color: #eee;
+    background-color: #00000059;
     border: none;
     margin: 8px 0 16px;
     padding: 10px 15px;
@@ -106,10 +108,11 @@
     border-radius: 8px;
     width: 100%;
     outline: none;
+    text-align: center;
 }
 
 .form-container.sign-in button {
-    background-color: #512da8;
+    background-color: #030107a4;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -123,8 +126,8 @@
 }
 
 .form-container.sign-in a {
-    font-size: 13px;
-    color: #333;
+    font-size: 16px;
+    color: #ffffff;
     text-decoration: none;
     margin-top: 4px;
 }
