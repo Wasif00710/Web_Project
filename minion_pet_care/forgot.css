@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ===== Page Background & Base ===== */
+.login-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', sans-serif;
+    color: #111827;
+
+    /* same cat background + animation */
+    background: url("https://the15net.com/wp-content/uploads/2025/11/dreamstime_s_354477097.jpg") repeat-x;
+    background-size: auto 60%;
+    background-position: 0 0;
+    animation: slideBg 40s linear infinite;
+}
+
+@keyframes slideBg {
+    0%   { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ===== Navbar buttons (copied from login.css) ===== */
+.navbar-nav .nav-link {
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  color: #ff3500 !important;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  margin: 0 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  background: #ff3500;
+  color: #ffffff !important;
+  border-color: #ff3500;
+}
+
+.navbar-nav .nav-link.active {
+  background: #d52b00;
+  color: #ffffff !important;
+  border-color: #ff3500;
+}
+
+/* ===== Centering the card ===== */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* space for header + footer */
+    padding: 40px 16px;
+}
+
+/* container for this page only */
+.login-container.single-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Glass card ===== */
+.form-container.sign-in {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    max-width: 520px;
+    width: 100%;
+    padding: 45px 40px;
+    margin: 0 auto;
+}
+
+/* ===== Typography & form elements ===== */
+.form-container.sign-in h1 {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #35155D;
+}
+
+.form-container.sign-in span {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+.form-container.sign-in form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-container.sign-in input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0 16px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container.sign-in button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form-container.sign-in a {
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.form-container.sign-in a:hover {
+    text-decoration: underline;
+}

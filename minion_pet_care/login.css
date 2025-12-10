@@ -276,3 +276,51 @@ h1{
     font-family: 'Times New Roman', sans-serif;
     background: transparent !important;
 }
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+/* Forgot password / single-form page */
+.login-container.single-form .form-container {
+    position: relative;
+    width: 100%;
+}
+/* ========== FORGOT PASSWORD PAGE ONLY ========== */
+
+/* Center the white/glass card vertically & horizontally */
+.forgot-page .login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* space for header + footer */
+    padding: 40px 0;
+}
+
+/* Remove big white 2-panel container on this page only */
+.forgot-page .login-container {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    width: auto;
+    min-height: auto;
+    overflow: visible;
+}
+
+/* Make the inner box glassy and centered */
+.forgot-page .login-container .form-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 480px;
+    padding: 45px 40px;
+    margin: 0 auto;
+}
+
+/* Title color on forgot page */
+.forgot-page .login-container h1 {
+    color: #35155D !important;
+}
