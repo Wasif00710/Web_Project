@@ -435,12 +435,37 @@ h3 {
 .boxed-btn3:focus {
   outline: none;
 }
-.hero-btns {
-    display: flex;
-    justify-content: flex-start; /* align left */
-    gap: 20px; /* space between buttons */
-    margin-left: 90px; /* move buttons to the right */
+.hero-btns a {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ff3c00; /* your theme orange */
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.35s ease;
 }
+
+/* Hover effect */
+.hero-btns a:hover {
+    background: rgba(255, 255, 255, 0.35); /* more visible glass */
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  
+    color: #ff3c00;
+    transform: translateY(-3px); /* floating effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
 
 
 /* line 49, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
@@ -1447,12 +1472,13 @@ h3 {
 .slider_area .single_slider .slider_text {
   position: relative;
   z-index: 6;
+  padding-left: 80px;   /* instead of margin-left on h3 & p */
 }
 
 /* line 30, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 {
   color: #155104;
-   margin-left: 80px; /* adjust the value to move right */
+  
   font-family: "Poppins", sans-serif;
   font-size: 75px;
   font-weight: 200;
@@ -3494,6 +3520,43 @@ h3 {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+/* Glass dropdown menu */
+.dropdown .dropdown-menu {
+  background: rgba(255, 255, 255, 0.25); /* transparent white */
+  backdrop-filter: blur(10px);           /* GLASS BLUR EFFECT */
+  -webkit-backdrop-filter: blur(10px);   /* safari support */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+  visibility: hidden;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown item style */
+.dropdown .dropdown-menu .dropdown-item {
+  color: #222;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Hover on item */
+.dropdown .dropdown-menu .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.45); /* more glassy */
+  backdrop-filter: blur(15px);
+  padding-left: 14px; /* small movement */
+  color: #ff3c00;     /* your orange theme */
+}
+
 
 /* line 10, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_contact.scss */
 .contact-info {
@@ -5864,8 +5927,6 @@ h6 {
   box-shadow: none;
   padding: 0;
 }
-
-/* line 1054, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_blog.scss */
 .single-post-area .social-links {
   padding-top: 10px;
 }
@@ -5883,6 +5944,45 @@ h6 {
   font-size: 14px;
   transition: all 0.2s linear;
 }
+.footer_widget {
+  text-align: center;
+}
+
+.footer_widget .address_text {
+  margin-top: 10px;
+}
+
+.socail_links ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.socail_links ul li {
+  list-style: none;
+  margin: 0 6px;
+}
+
+.socail_links ul li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  color: #333;
+  transition: .3s;
+}
+
+.socail_links ul li a:hover {
+  background: #ff3500;
+  border-color: #ff3500;
+  color: #fff;
+}
+
 
 /* line 1074, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_blog.scss */
 .single-post-area .blog_details {
