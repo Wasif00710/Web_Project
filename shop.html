@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetSop — Premium Pet Store</title>
+
+  <!-- Replace with your favicon path -->
+  <link rel="icon" href="icons/petshop.ico" type="image/x-icon">
+
+  <!-- Link to the CSS file (I'll provide next) -->
+  <link rel="stylesheet" href="shop.css">
+
+  <!-- Page-level description for SEO -->
+  <meta name="description" content="PetSop — premium pet supplies shop: dogs, cats, birds, small pets, aquatic, vet, and special offers.">
+</head>
+<body class="site-body darkmode" data-theme="dark">
+
+  <!-- ============================
+       SITE HEADER
+       ============================ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <div class="brand-group">
+        <button id="menuToggle" class="pill btn icon" aria-label="Open menu" aria-expanded="false">☰</button>
+        <a href="/" class="logo pill" aria-label="PetSop home">PetSop</a>
+      </div>
+
+      <div class="search-group">
+        <input id="searchInput" class="pill input" type="search" placeholder="Search products, breeds, food..." aria-label="Search products">
+        <button id="searchBtn" class="pill btn" aria-label="Search">Search</button>
+      </div>
+
+      <div class="action-group">
+        <button id="wishlistBtn" class="pill btn" aria-label="Wishlist">♡ Wishlist</button>
+        <button id="cartBtn" class="pill btn" aria-label="Open cart">🛒 Cart <span id="cartCount" class="badge" aria-live="polite">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================
+       OFF-CANVAS NAV / MENU
+       ============================ -->
+  <nav id="offcanvas" class="offcanvas hidden" aria-hidden="true" aria-label="Main navigation">
+    <div class="offcanvas-header">
+      <h2>Categories</h2>
+      <button id="closeMenu" class="pill btn icon" aria-label="Close menu">✕</button>
+    </div>
+
+    <div id="menuSections" class="menu-sections">
+      <!-- Menu items: injected server-side or by JS; for convenience the HTML also includes them here -->
+      <!-- Each category block lists subcategories and a "View All" button. Buttons use data attributes for JS routing -->
+      <section class="menu-block" data-category="Dog">
+        <h3>Dog</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dry Dog Food">Dry Dog Food</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Wet Dog Food">Wet Dog Food</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Treats & Dog Bones">Dog Treats & Dog Bones</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Supplements & Special Food">Dog Supplements</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Kennels, Dog Flaps & Gates">Kennels & Gates</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Crates & Dog Travel">Crates & Travel</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Beds & Baskets">Beds & Baskets</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Toys, Sports & Training">Toys & Training</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Grooming & Care">Grooming & Care</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Leads & Dog Collars">Leads & Collars</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Bowls & Feeders">Bowls & Feeders</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Clothing">Clothing</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Technology">Dog Technology</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Puppy Products">Puppy Products</button>
+          <button class="menu-item pill btn" data-cat="Dog" data-sub="Dog Breed Shop">Dog Breed Shop</button>
+          <button class="menu-item pill btn ghost" data-cat="Dog" data-sub="Pet Parents - Everything for You">Pet Parents — Everything</button>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Cat">
+        <h3>Cat</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Dry Cat Food">Dry Cat Food</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Wet Cat Food">Wet Cat Food</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Litter">Cat Litter</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Litter Boxes & Litter Trays">Litter Boxes</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Trees & Cat Scratching Posts">Cat Trees & Scratching Posts</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Baskets & Beds">Cat Baskets & Beds</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Toys">Cat Toys</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Bowls & Fountains">Bowls & Fountains</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Flaps & Nets">Cat Flaps & Nets</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Treats & Snacks">Treats & Snacks</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Care & Grooming">Care & Grooming</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Supplements & Specialty Food">Supplements & Specialty Food</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Cat Carriers & Transport">Carriers & Transport</button>
+          <button class="menu-item pill btn" data-cat="Cat" data-sub="Kitten Products">Kitten Products</button>
+          <button class="menu-item pill btn ghost" data-cat="Cat" data-sub="Cat Breed Shop">Cat Breed Shop</button>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Small Pet">
+        <h3>Small Pet</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Small Pet Cages">Small Pet Cages</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Rabbit & Guinea Pig Hutches">Rabbit & Guinea Pig Hutches</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Runs & Fencing">Runs & Fencing</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Small Pet Food">Small Pet Food</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Cage Accessories">Cage Accessories</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Snacks & Supplements">Snacks & Supplements</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Hay & Straw">Hay & Straw</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Care & Grooming">Care & Grooming</button>
+          <button class="menu-item pill btn" data-cat="Small Pet" data-sub="Toys & Travel">Toys & Travel</button>
+          <div class="muted small">Includes: Rabbit, Guinea Pig, Hamster, Rat, Mouse, Chinchilla, Gerbil, Degu, Ferret</div>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Bird">
+        <h3>Bird</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Bird" data-sub="Bird Food">Bird Food</button>
+          <button class="menu-item pill btn" data-cat="Bird" data-sub="Bird Cages">Bird Cages</button>
+          <button class="menu-item pill btn" data-cat="Bird" data-sub="Bird Cage Accessories">Cage Accessories</button>
+          <button class="menu-item pill btn" data-cat="Bird" data-sub="Bird Snacks & Crackers">Snacks & Crackers</button>
+          <button class="menu-item pill btn" data-cat="Bird" data-sub="Bird Toys">Bird Toys</button>
+          <button class="menu-item pill btn ghost" data-cat="Bird" data-sub="Wild Birds & Small Animals">Wild Birds & Small Animals</button>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Aquatic">
+        <h3>Aquatic</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Aquatic" data-sub="Fish Food">Fish Food</button>
+          <button class="menu-item pill btn" data-cat="Aquatic" data-sub="Water Care">Water Care</button>
+          <button class="menu-item pill btn ghost" data-cat="Aquatic" data-sub="Garden Pond">Garden Pond</button>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Vet">
+        <h3>Vet & Specialist</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Vet" data-sub="Dog Vet Food & Specialist Food">Dog Vet Food</button>
+          <button class="menu-item pill btn" data-cat="Vet" data-sub="Cat Vet Food & Specialist Food">Cat Vet Food</button>
+          <button class="menu-item pill btn ghost" data-cat="Vet" data-sub="Ailments">Ailments</button>
+        </div>
+      </section>
+
+      <section class="menu-block" data-category="Special Offers">
+        <h3>Special Offers</h3>
+        <div class="menu-items">
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="Monthly Food Offers">Monthly Food Offers</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="🎁 Eid/Puza Market">🎁 Eid/Puza Market</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="New Products">New Products</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="Trial Packs">Trial Packs</button>
+          <button class="menu-item pill btn ghost" data-cat="Special Offers" data-sub="Clearance Sale">Clearance Sale</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="Seasonal Specials">Seasonal Specials</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="Bulk Buys">Bulk Buys</button>
+          <button class="menu-item pill btn" data-cat="Special Offers" data-sub="Working / Active Dogs">Working / Active Dogs</button>
+        </div>
+      </section>
+    </div>
+  </nav>
+
+  <!-- Overlay for off-canvas -->
+  <div id="overlay" class="overlay hidden" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- ============================
+       MAIN / HERO / CTA
+       ============================ -->
+  <main id="main" role="main">
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-images">
+          <!-- Placeholder images. Leave blank or set actual paths. -->
+          <img class="hero-item lazy" data-src="/images/hero-1.jpg" alt="Hero 1">
+          <img class="hero-item lazy hidden" data-src="/images/hero-2.jpg" alt="Hero 2">
+          <img class="hero-item lazy hidden" data-src="/images/hero-3.jpg" alt="Hero 3">
+        </div>
+
+        <div class="hero-cta">
+          <h1 class="hero-title">Premium care for every pet — discover, compare & buy</h1>
+          <p class="hero-sub">High-quality products. Smart cart. Responsive experiences on phone, tablet & desktop.</p>
+          <div class="cta-row">
+            <button id="shopNow" class="pill btn large">Shop Now</button>
+            <button id="viewOffers" class="pill btn ghost">View Offers</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         CATEGORY PANELS - each has its own dedicated HTML container
+         (JS will show/hide or route to separate pages if needed)
+         ============================ -->
+    <section id="categoryStage" class="category-stage container">
+      <!-- Initially shows tiles for all primary categories -->
+      <div id="categoryGrid" class="cat-grid">
+        <!-- JS will populate the tiles by cloning templates from below.
+             Each tile includes a quick action row with pill buttons that open the specific subcategory view. -->
+      </div>
+    </section>
+
+    <!-- ============================
+         PRODUCTS / FEATURED
+         ============================ -->
+    <section id="featured" class="featured container">
+      <h2 class="section-title">Featured Products</h2>
+      <div id="prodGrid" class="prod-grid">
+        <!-- JS will inject product cards here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       CART DRAWER (FLOATING)
+       ============================ -->
+  <aside id="cartDrawer" class="cart-drawer hidden" aria-hidden="true" aria-label="Cart drawer">
+    <header class="cart-header">
+      <h3>Cart</h3>
+      <button id="closeCart" class="pill btn icon" aria-label="Close cart">✕</button>
+    </header>
+
+    <div id="cartItems" class="cart-items">
+      <p class="muted">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="totals">Total: <strong id="cartTotal">$0.00</strong></div>
+      <button id="checkout" class="pill btn large">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ============================
+       FOOTER (live time + small links)
+       ============================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="brand-block">
+        <strong>PetSop</strong>
+        <p class="muted">Premium pet supplies for dogs, cats, birds, aquatic & small animals.</p>
+      </div>
+
+      <div class="footer-actions">
+        <small id="serverTime" class="muted">Updated: 2025</small>
+        <div class="socials">
+          <a class="pill btn ghost" href="#" aria-label="Instagram">Instagram</a>
+          <a class="pill btn ghost" href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================
+       COOKIE CONSENT (explicit opt-in)
+       - Implementation will respect privacy laws.
+       - CSV export of logs ONLY after explicit opt-in (no secret logging).
+       ============================ -->
+  <div id="cookieConsent" class="cookie-consent hidden" role="dialog" aria-modal="true" aria-label="Cookie consent">
+    <p>We use cookies to improve your experience. Do you consent to storing usage details for analytics and business needs?</p>
+    <div class="consent-actions">
+      <button id="consentAccept" class="pill btn">Yes, I consent</button>
+      <button id="consentDecline" class="pill btn ghost">No, thanks</button>
+    </div>
+  </div>
+
+  <!-- ============================
+       HIDDEN TEMPLATES
+       - Each <template> is the specific HTML for a subcategory page or product list.
+       - JS will clone and mount these into the DOM when user opens a subcategory.
+       ============================ -->
+
+  <!-- Example subcategory template: generic product listing -->
+  <template id="subcategoryTemplate">
+    <section class="subcategory container">
+      <header class="subcategory-header">
+        <h2 class="subcategory-title"></h2>
+        <p class="subcategory-desc muted"></p>
+      </header>
+
+      <div class="subcategory-controls">
+        <div class="filters">
+          <label class="pill input">
+            <span class="muted small">Sort</span>
+            <select class="pill input" name="sort">
+              <option value="relevance">Relevance</option>
+              <option value="price-asc">Price: Low → High</option>
+              <option value="price-desc">Price: High → Low</option>
+              <option value="popular">Most popular</option>
+            </select>
+          </label>
+        </div>
+        <div class="view-actions">
+          <button class="pill btn ghost" data-view="grid">Grid</button>
+          <button class="pill btn ghost" data-view="list">List</button>
+        </div>
+      </div>
+
+      <div class="product-list prod-grid">
+        <!-- JS will generate product cards here for the subcategory -->
+      </div>
+
+      <div class="pagination muted">
+        <!-- Placeholder for pagination controls -->
+      </div>
+    </section>
+  </template>
+
+  <!-- Example product card template -->
+  <template id="productCardTemplate">
+    <article class="product card">
+      <div class="product-thumb">
+        <img class="product-image" alt="">
+      </div>
+      <div class="product-meta">
+        <h3 class="product-title"></h3>
+        <div class="product-sub muted"></div>
+        <div class="product-bottom">
+          <div class="price"><strong class="price-value"></strong></div>
+          <div class="product-actions">
+            <button class="pill btn add-to-cart">Add</button>
+            <button class="pill btn ghost quick-view">Quick view</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- ============================
+       LIGHTWEIGHT NO-JS FALLBACK / NOSCRIPT
+       ============================ -->
+  <noscript>
+    <div class="noscript-message container">
+      <p class="muted">This site works best with JavaScript enabled. Basic navigation is available, but interactive features (search, cart, animations) require JavaScript.</p>
+    </div>
+  </noscript>
+
+  <!-- ============================
+       Link to the JS file (I'll provide next)
+       - app.js will provide all dynamic behavior: menu interactions, carousel, search, cart, consent, CSV export (only with consent).
+       ============================ -->
+  <script src="shop.js" defer></script>
+</body>
+</html>
+
+
+
