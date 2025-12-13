@@ -409,7 +409,7 @@ h3 {
 /* line 17, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
 .boxed-btn:hover {
   background: #ff3500;
-  color: #fff !important;
+  color: #ffffff !important;
   border: 1px solid #ff3500;
 }
 
@@ -425,24 +425,35 @@ h3 {
 
 /* line 29, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
 .boxed-btn3 {
-  font-size: 18px;
+  background: rgba(255, 255, 255, 0.20);      /* GLASS background */
+  backdrop-filter: blur(12px);                /* BLUR (stable) */
+  -webkit-backdrop-filter: blur(12px);
+  
+  font-size: 16px;
   font-weight: 500;
-  color: #fff;
-  padding: 17px 55px;
+  border: 1px solid rgba(255, 255, 255, 0.45); /* GLASS border */
+  color: #ffffff;
+  
+  padding: 17px 50px;
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
   border-radius: 30px;
-  background-position: 100% 0;
-  background-position: 0 0;
+ text-decoration: none; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
 }
 
-/* line 40, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
+/* Hover glass effect */
 .boxed-btn3:hover {
-  background-size: 200% 200%;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.35);   /* brighter blur */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #ff3c00;
+  transform: translateY(-3px);            /* floating */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
+
 
 /* line 45, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
 .boxed-btn3:focus {
@@ -482,31 +493,79 @@ h3 {
   /* floating effect */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
+/* Glass effect on each service card */
+.single_service {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 25px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+/* Hover animation */
+.single_service:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.28);
+}
+
+/* Title color */
+.single_service h3 {
+    color: #0F2A1E; /* modern deep charcoal */
+    transition: color 0.35s ease;
+}
+
+/* Hover title highlight */
+.single_service:hover h3 {
+    color: #ff3c00; /* your accent orange */
+}
+
+/* Description text */
+.single_service p {
+    color: #ffffff;
+    opacity: 0.85;
+}
 
 
 
 /* line 49, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
+/* Glass button */
 .boxed-btn4 {
-
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.20);      /* GLASS background */
+  backdrop-filter: blur(12px);                /* BLUR (stable) */
+  -webkit-backdrop-filter: blur(12px);
+  
   font-size: 16px;
   font-weight: 500;
-  border: 1px solid transparent;
-  color: #ff3500;
+  border: 1px solid rgba(255, 255, 255, 0.45); /* GLASS border */
+  color: #ffffff;
+  
   padding: 17px 50px;
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
   border-radius: 30px;
+ text-decoration: none; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
 }
 
-/* line 59, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
+/* Hover glass effect */
 .boxed-btn4:hover {
-  background: #ff3500;
-  color: #fff;
-  border: 1px solid #ff3500;
+  background: rgba(255, 255, 255, 0.35);   /* brighter blur */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #1100ff;
+  transform: translateY(-3px);            /* floating */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
+
+
 
 /* line 64, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
 .boxed-btn4:focus {
@@ -592,7 +651,7 @@ h3 {
   font-size: 50px;
   font-weight: 700;
   line-height: 60px;
-  color: #191d34;
+  color: #000000;
   font-family: "Poppins", sans-serif;
 }
 
@@ -632,7 +691,7 @@ h3 {
 .section_title p {
   font-size: 16px;
   line-height: 30px;
-  color: #909092;
+  color: #ffffff;
   font-weight: 400;
 }
 
@@ -2126,6 +2185,7 @@ h3 {
 /* line 41, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_service.scss */
 .service_area .single_service .service_content p {
   margin-bottom: 0;
+  color: #eb2626;
 }
 
 /* line 45, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_service.scss */
@@ -2916,8 +2976,8 @@ h3 {
 
 /* Inputs & textarea inside glass */
 .glass-box .form-control {
-    background: rgba(205, 100, 51, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 81, 0, 0.06);
+    border: 1px solid rgb(9, 0, 0);
     color: #ffffff;
     box-shadow: none;
 }
@@ -2949,11 +3009,11 @@ h3 {
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
-    color: #da572f; /* accent orange */
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #ff0000; /* accent orange */
+    border: 1px solid rgb(219, 0, 0);
 
     /* Glass effect */
-    background: rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.535);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -2964,11 +3024,11 @@ h3 {
 
 /* Hover */
 .glass-send-btn:hover {
-    background: rgb(143, 198, 150);
+    background: rgba(0, 238, 255, 0.383);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    color: #ff3c00;
+    color: #000000;
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
@@ -3569,7 +3629,7 @@ h3 {
 
 /* line 19, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_pet_care.scss */
 .pet_care_area .pet_info .section_title p {
-  color: #66666f;
+  color: #f3f3f3;
   line-height: 28px;
   font-size: 16px;
   margin-bottom: 54px;
@@ -3618,7 +3678,7 @@ h3 {
 
 /* line 20, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_adapt.scss */
 .adapt_area .adapt_help .section_title p {
-  color: #66666f;
+  color: #fbfbff;
   line-height: 28px;
   font-size: 16px;
   margin-bottom: 54px;
@@ -6222,7 +6282,7 @@ h6 {
 }
 
 .socail_links ul li a:hover {
-  background: #ff3500;
+  background: #ffffff;
   border-color: #ff3500;
   color: #fff;
 }
@@ -7001,6 +7061,160 @@ h6 {
 .blog_part .single-home-blog .card ul li span {
   margin-right: 10px;
   font-size: 12px;
+}
+/* ---------- Fix testimonial layout: avatar left / content fills right ---------- */
+
+/* ensure carousel wrapper allows multiple cards per row */
+.testmonial_area .textmonial_active {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 28px !important;
+  justify-content: flex-start !important;
+}
+
+/* make each owl item behave like a card box (two per row on desktop) */
+.testmonial_area .textmonial_active .owl-item,
+.testmonial_area .textmonial_active .testmonial_wrap {
+  width: calc(50% - 14px) !important; /* two across */
+  box-sizing: border-box;
+  display: inline-block !important;
+  vertical-align: top;
+}
+
+/* card: horizontal flex, top-aligned */
+.testmonial_area .single_testmonial {
+  display: flex !important;
+  align-items: flex-start !important;    /* top align text with avatar */
+  gap: 28px !important;
+  padding: 34px 42px !important;         /* reduced a bit from original to breathe */
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: 0 18px 40px rgba(20,20,20,0.06) !important;
+  min-height: 150px;                     /* keeps consistent card height */
+}
+
+/* avatar column: fixed size */
+.testmonial_area .single_testmonial .test_thumb {
+  flex: 0 0 110px !important;
+  margin: 0 !important;                  /* remove previous margin that caused misalignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* avatar image */
+.testmonial_area .single_testmonial .test_thumb img,
+.testmonial_area .owl-carousel .owl-item img {
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* content column fills the rest */
+.testmonial_area .single_testmonial .test_content {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  text-align: left !important;
+  padding: 0 !important;
+}
+
+/* typography adjustments */
+.testmonial_area .single_testmonial .test_content h4 {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: #222;
+  font-size: 18px;
+}
+.testmonial_area .single_testmonial .test_content span {
+  display: block;
+  margin-bottom: 12px;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 300;
+}
+.testmonial_area .single_testmonial .test_content p {
+  margin: 0;
+  color: #7f7f7f;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* keep mobile stacked single-column */
+@media (max-width: 767px) {
+  .testmonial_area .textmonial_active .owl-item,
+  .testmonial_area .textmonial_active .testmonial_wrap {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .testmonial_area .single_testmonial {
+    flex-direction: row;
+    padding: 20px !important;
+    min-height: auto;
+  }
+  .testmonial_area .single_testmonial .test_thumb {
+    flex: 0 0 78px !important;
+  }
+  .testmonial_area .single_testmonial .test_thumb img {
+    width: 78px !important;
+    height: 78px !important;
+  }
+}
+/* Force carousel to behave like a static multi-column grid (no sliding) */
+.testmonial_area .owl-stage {
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 28px;
+  align-items: flex-start !important;
+}
+
+/* make owl-item behave like normal grid items */
+.testmonial_area .owl-item {
+  transform: none !important;
+  float: none !important;
+  display: inline-block !important;
+  width: calc(50% - 14px) !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important; /* show all at full opacity */
+}
+
+/* hide carousel nav/dots (optional) */
+.testmonial_area .owl-dots,
+.testmonial_area .owl-nav {
+  display: none !important;
+}
+.team_area .single_team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 360px; /* adjust if needed */
+}
+
+.team_area .thumb {
+  width: 260px;
+  height: 260px;
+  margin-bottom: 15px;
+}
+
+.team_area .mamber_inner {
+  margin-top: 0;
+}
+.single_team .thumb {
+  clip-path: polygon(
+    30% 0%, 70% 0%,
+    100% 30%, 100% 70%,
+    70% 100%, 30% 100%,
+    0% 70%, 0% 30%
+  );
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

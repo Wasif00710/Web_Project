@@ -1,0 +1,378 @@
+/* about.css - page specific rules */
+
+/* HERO */
+.about-hero {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.about-hero .display-5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+.about-hero .lead { color: rgba(255,255,255,0.9); }
+
+/* SERVICES - reuse .single_service but tune text color for light backgrounds */
+.white-bg .single_service {
+  background: transparent;
+  border: 1px solid rgba(68, 68, 68, 0.04);
+  box-shadow: none;
+  padding: 25px;
+}
+.white-bg .single_service h4 { color: #171d3f; }
+
+/* TEAM CARDS */
+.team-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+.team-card .card-img-top {
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* COUNTERS */
+.counter-box { padding: 30px; color: #fff; }
+.counter { font-size: 40px; font-weight: 700; margin-bottom: 8px; }
+
+/* responsive spacing */
+@media (max-width: 767px) {
+  .about-hero { padding: 40px 0; text-align: center; }
+  .about-hero img { margin: 20px auto 0; }
+  .team-card .card-img-top { height: 180px; }
+}
+/* =========================================================
+   ABOUT PAGE — EXTRA STYLES (fully compatible with your site)
+   ========================================================= */
+
+/* ABOUT HERO */
+.about-hero,
+.slider_area.about-hero {
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+}
+.about-hero h1,
+.about-hero h3 {
+  color: #d9ffce;
+}
+.about-hero p {
+  color: #333;
+  max-width: 550px;
+}
+
+/* ABOUT SECTION TEXT */
+.about_area .about_text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #155104;
+  margin-bottom: 15px;
+}
+.about_area .about_text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+.about_area .about_text .about-list {
+  list-style: none;
+  margin: 15px 0 25px;
+  padding: 0;
+}
+.about_area .about_text .about-list li {
+  font-size: 16px;
+  color: #ff3636;
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.about_area .about_text .about-list li::before {
+  content: "✔";
+  color: #155104;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+/* ABOUT IMAGE */
+.about_thumb img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SERVICE CARDS (same design as index, but refined for about section) */
+.single_service {
+  padding: 35px 20px;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.3s;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+}
+.single_service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+.single_service h4 {
+  margin-top: 18px;
+  color: #155104;
+  font-weight: 700;
+}
+
+/* TEAM SECTION */
+.team_area .single_team {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  padding-bottom: 20px;
+}
+.team_area .single_team:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+}
+.team_area .team_thumb img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.team_area .team_meta h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #155104;
+  margin-top: 12px;
+}
+.team_area .designation {
+  font-size: 14px;
+  color: #777;
+}
+
+/* COUNTERS */
+.single_counter h2 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 700;
+}
+.single_counter p {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+/* CTA SECTION */
+.contact_cta {
+  padding: 70px 0;
+}
+.contact_cta h3 {
+  color: #155104;
+  font-size: 28px;
+  font-weight: 700;
+}
+.contact_cta p {
+  color: #333;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 767px) {
+  .about-hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .about-hero img {
+    margin-top: 25px;
+  }
+  .team_area .team_thumb img {
+    height: 220px;
+  }
+}
+
+.navbar { align-items: center; }
+
+/* Group left controls (menu toggle + brand) */
+.navbar .navbar-brand,
+.navbar > .container > .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+/* Make the pill style consistent and readable */
+.pill {
+  border-radius: 28px;
+  padding: 7px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: none;
+}
+
+/* Menu toggle (left) */
+#menuToggle {
+  background: transparent;
+  color: #ff3500;
+  border: 1px solid rgba(255,53,0,0.12);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* Desktop search (visible on lg and up in your header) */
+#searchInput.pill.input {
+  min-width: 260px;
+  max-width: 480px;
+  width: 36vw;
+  background: #fff;
+  color: #e03b3b;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 8px 14px;
+}
+
+/* improve placeholder contrast */
+#searchInput::placeholder { color: #9aa3a8; opacity: 1; }
+
+/* search button */
+#searchBtn.pill.btn {
+  background: #ffffff;
+  color: #e70909;
+  border: 5px solid rgba(247,54,6,0.12);
+  padding: 8px 14px;
+  border-radius: 28px;
+}
+
+/* Cart alignment: make it appear inline and slightly separated */
+#cartBtn {
+  background: #fff;
+  color: #ff3500;
+  border: 1px solid rgba(255,53,0,0.12);
+  padding: 6px 12px;
+  border-radius: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* Cart badge */
+#cartCount {
+  background: #ff3500;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  box-shadow: 0 4px 10px rgba(255,53,0,0.12);
+  margin-left: 6px;
+}
+
+/* Place nav items inline and vertically centered */
+.navbar .navbar-nav .nav-item { display: flex; align-items: center; }
+
+/* Make desktop controls visible / mobile simplified */
+@media (max-width: 991.98px) {
+  /* hide large desktop search on smaller screens */
+  #searchInput { display: none !important; }
+  /* show small inline search if you use #searchInputMobile inside collapsed menu */
+  #searchBtn { padding: 6px 10px; }
+}
+
+/* If controls appear outside the container due to z-index, fix stacking */
+.navbar, .navbar .container {
+  z-index: 1020;
+}
+
+/* Small finishing touch: hover lift */
+.pill:hover { transform: translateY(-2px); }
+/* Make sure the offcanvas sits above the overlay and everything else */
+#offcanvas,
+#sideCategories,
+.offcanvas,
+#sideCategories.open {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 360px;
+  z-index: 4000 !important;   /* must be higher than overlay */
+  transform: translateX(0);    /* ensure visible when open */
+}
+
+/* Overlay must be below the offcanvas */
+#overlay,
+.side-panel-overlay,
+#sidePanelOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3500 !important;    /* lower than offcanvas */
+  background: rgba(31, 30, 30, 0.55);
+}
+
+/* If overlay is a pseudo-element (.overlay::before), hide it when menu-open */
+.menu-open .overlay::before,
+.menu-open .overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Stop overlay blocking pointer events to the panel if panel is a child */
+#offcanvas, #sideCategories { pointer-events: auto; }
+
+/* Prevent body scrolling while panel open */
+body.panel-open { overflow: hidden !important; }
+/* FORCE OFFCANVAS ABOVE EVERYTHING */
+/* Offcanvas (hidden by default) */
+#offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;            /* adjust if you want 360 */
+  max-width: 85vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 4000;           /* high enough, not global-important */
+  transform: translateX(-110%); /* hidden off-screen */
+  transition: transform .28s ease;
+  pointer-events: none;
+  box-shadow: 6px 0 30px rgba(0,0,0,0.12);
+}
+
+/* when open */
+#offcanvas.show {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* backdrop */
+.offcanvas-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(99, 99, 99, 0.45);
+  z-index: 3990;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s;
+}
+.offcanvas-backdrop-custom.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Prevent body scroll while open */
+body.panel-open { overflow: hidden !important; }
+
+/* Hide offcanvas on large screens if you prefer desktop nav only */
+@media (min-width: 992px) {
+  #offcanvas, .offcanvas-backdrop-custom { display: none !important; }
+}

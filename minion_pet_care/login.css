@@ -324,3 +324,177 @@ h1{
 .forgot-page .login-container h1 {
     color: #35155D !important;
 }
+
+/* ---------- Header controls: menu toggle, search, cart ---------- */
+/* Ensure these styles load after other bootstrap/theme rules */
+
+.navbar { align-items: center; }
+
+/* Group left controls (menu toggle + brand) */
+.navbar .navbar-brand,
+.navbar > .container > .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+/* Make the pill style consistent and readable */
+.pill {
+  border-radius: 28px;
+  padding: 7px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: none;
+}
+
+/* Menu toggle (left) */
+#menuToggle {
+  background: transparent;
+  color: #ff3500;
+  border: 1px solid rgba(255,53,0,0.12);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* Desktop search (visible on lg and up in your header) */
+#searchInput.pill.input {
+  min-width: 260px;
+  max-width: 480px;
+  width: 36vw;
+  background: #fff;
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 8px 14px;
+}
+
+/* improve placeholder contrast */
+#searchInput::placeholder { color: #9aa3a8; opacity: 1; }
+
+/* search button */
+#searchBtn.pill.btn {
+  background: #ffffff;
+  color: #e70909;
+  border: 5px solid rgba(247,54,6,0.12);
+  padding: 8px 14px;
+  border-radius: 28px;
+}
+
+/* Cart alignment: make it appear inline and slightly separated */
+#cartBtn {
+  background: #fff;
+  color: #ff3500;
+  border: 1px solid rgba(255,53,0,0.12);
+  padding: 6px 12px;
+  border-radius: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* Cart badge */
+#cartCount {
+  background: #ff3500;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  box-shadow: 0 4px 10px rgba(255,53,0,0.12);
+  margin-left: 6px;
+}
+
+/* Place nav items inline and vertically centered */
+.navbar .navbar-nav .nav-item { display: flex; align-items: center; }
+
+/* Make desktop controls visible / mobile simplified */
+@media (max-width: 991.98px) {
+  /* hide large desktop search on smaller screens */
+  #searchInput { display: none !important; }
+  /* show small inline search if you use #searchInputMobile inside collapsed menu */
+  #searchBtn { padding: 6px 10px; }
+}
+
+/* If controls appear outside the container due to z-index, fix stacking */
+.navbar, .navbar .container {
+  z-index: 1020;
+}
+
+/* Small finishing touch: hover lift */
+.pill:hover { transform: translateY(-2px); }
+/* Make sure the offcanvas sits above the overlay and everything else */
+#offcanvas,
+#sideCategories,
+.offcanvas,
+#sideCategories.open {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 360px;
+  z-index: 4000 !important;   /* must be higher than overlay */
+  transform: translateX(0);    /* ensure visible when open */
+}
+
+/* Overlay must be below the offcanvas */
+#overlay,
+.side-panel-overlay,
+#sidePanelOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3500 !important;    /* lower than offcanvas */
+  background: rgba(0,0,0,0.55);
+}
+
+/* If overlay is a pseudo-element (.overlay::before), hide it when menu-open */
+.menu-open .overlay::before,
+.menu-open .overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Stop overlay blocking pointer events to the panel if panel is a child */
+#offcanvas, #sideCategories { pointer-events: auto; }
+
+/* Prevent body scrolling while panel open */
+body.panel-open { overflow: hidden !important; }
+/* FORCE OFFCANVAS ABOVE EVERYTHING */
+#offcanvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99999 !important;   /* THE MOST IMPORTANT LINE */
+  transform: translateX(0) !important;
+  pointer-events: auto !important;
+}
+
+/* OVERLAY MUST BE BELOW OFFCANVAS */
+#overlay {
+  position: fixed !important;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9990 !important;     /* LOWER THAN MENU */
+  pointer-events: auto;
+}
+
+/* WHEN MENU IS OPEN, PREVENT OVERLAY ::before FROM SHOWING */
+.overlay::before,
+#overlay::before {
+  display: none !important;
+}
+
+/* Body should not scroll when panel open */
+body.panel-open {
+  overflow: hidden !important;
+}
