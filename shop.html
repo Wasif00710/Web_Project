@@ -6,37 +6,115 @@
   <title>PetSop — Premium Pet Store</title>
 
   <!-- Replace with your favicon path -->
-  <link rel="icon" href="icons/petshop.ico" type="image/x-icon">
+
 
   <!-- Link to the CSS file (I'll provide next) -->
   <link rel="stylesheet" href="shop.css">
 
   <!-- Page-level description for SEO -->
   <meta name="description" content="PetSop — premium pet supplies shop: dogs, cats, birds, small pets, aquatic, vet, and special offers.">
+<link rel="shortcut icon" type="image/png" href="img/Logo.png">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- CSS here -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./boarding.css">
+  <link rel="stylesheet" href="./shop.css">
+
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="./ved.css">
+  <link rel="stylesheet" href="./trainer.css">
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
-<body class="site-body darkmode" data-theme="dark">
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- ============================
-       SITE HEADER
-       ============================ -->
-  <header class="site-header" role="banner">
-    <div class="header-inner container">
-      <div class="brand-group">
-        <button id="menuToggle" class="pill btn icon" aria-label="Open menu" aria-expanded="false">☰</button>
-        <a href="/" class="logo pill" aria-label="PetSop home">PetSop</a>
+
+<body>
+  <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+ <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+
+      <!-- LEFT SIDE: Menu Toggle + Logo -->
+      <button id="menuToggle" class="pill btn icon me-2" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/Logo.png" alt="Minion Pet Care Logo"
+             style="height:70px; width:auto; border-radius:50%; margin-right:10px;">
+        <span class="fw-bold">Minion Pet Care</span>
+      </a>
+
+      <!-- Mobile toggle button (Bootstrap collapse) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SEARCH BAR (desktop visible) -->
+      <div class="d-none d-lg-flex ms-3 align-items-center">
+        <input id="searchInput" class="pill input" type="search"
+               placeholder="Search products, breeds, food..." aria-label="Search products">
+        <button id="searchBtn" class="pill btn ms-2">Search</button>
       </div>
 
-      <div class="search-group">
-        <input id="searchInput" class="pill input" type="search" placeholder="Search products, breeds, food..." aria-label="Search products">
-        <button id="searchBtn" class="pill btn" aria-label="Search">Search</button>
+      <!-- NAV MENU -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
+               role="button" data-bs-toggle="dropdown">Services</a>
+
+            <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <li><a class="dropdown-item" href="shop.html">Pet Shop</a></li>
+              <li><a class="dropdown-item" href="trainer.html">Pet Trainer</a></li>
+              <li><a class="dropdown-item" href="ved.html">Pet Veterinarian</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-btn" href="./minion_pet_care/login.html">Login</a></li>
+
+          <!-- Cart Button -->
+          <li class="nav-item ms-lg-2">
+            <button id="cartBtn" class="pill btn" aria-label="Open cart">
+              🛒 Cart <span id="cartCount" class="badge" aria-live="polite">0</span>
+            </button>
+          </li>
+
+          <!-- MOBILE SEARCH (only visible on small screens) -->
+          <li class="nav-item d-lg-none mt-3">
+            <input id="searchInputMobile" class="pill input w-100 mb-2" type="search"
+                   placeholder="Search products, breeds, food..." aria-label="Search">
+            <button id="searchBtnMobile" class="pill btn w-100">Search</button>
+          </li>
+
+        </ul>
       </div>
 
-      <div class="action-group">
-        <button id="wishlistBtn" class="pill btn" aria-label="Wishlist">♡ Wishlist</button>
-        <button id="cartBtn" class="pill btn" aria-label="Open cart">🛒 Cart <span id="cartCount" class="badge" aria-live="polite">0</span></button>
-      </div>
     </div>
-  </header>
+  </nav>
+</header>
 
   <!-- ============================
        OFF-CANVAS NAV / MENU
@@ -228,22 +306,86 @@
   <!-- ============================
        FOOTER (live time + small links)
        ============================ -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner container">
-      <div class="brand-block">
-        <strong>PetSop</strong>
-        <p class="muted">Premium pet supplies for dogs, cats, birds, aquatic & small animals.</p>
-      </div>
+  <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
 
-      <div class="footer-actions">
-        <small id="serverTime" class="muted">Updated: 2025</small>
-        <div class="socials">
-          <a class="pill btn ghost" href="#" aria-label="Instagram">Instagram</a>
-          <a class="pill btn ghost" href="#" aria-label="Facebook">Facebook</a>
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Contact Us</h3>
+                <ul class="address_line">
+                  <li>+8801963929839</li>
+                  <li><a href="#">minionpetcare@gmail.com</a></li>
+                  <li>Daffodil Smart City</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Our Services</h3>
+                <ul class="links">
+                  <li><a href="#">Pet Training</a></li>
+                  <li><a href="#">Pet Boarding</a></li>
+                  <li><a href="#">Pet Adoption</a></li>
+                  <li><a href="#">Pet Veterinarian</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Quick Link</h3>
+                <ul class="links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="./login.html">Login info</a></li>
+                  <li><a href="#">Contect us</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <div class="footer_logo">
+                  <a href="#">
+                    <img src="img/Logo.png" alt="Minion Pet Care Logo" class="center-logo"
+                      style="height:180px; width:auto; border-radius:70%;">
+                  </a>
+                </div>
+                <p class="center_text">Daffodil Smart City,<br> Asulia, Savar</p>
+                <div class="socail_links">
+                  <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+
+      <div class="copy-right_text">
+        <div class="container">
+          <div class="bordered_1px"></div>
+          <p class="copy_right text-center">
+            Copyright ©
+            <script>document.write(new Date().getFullYear());</script>
+            All rights reserved | 
+            <i class="ti-heart"></i> by <a href="./index.html" target="_blank">Minion Pet Care</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer_end  -->
+
 
   <!-- ============================
        COOKIE CONSENT (explicit opt-in)
@@ -334,6 +476,45 @@
        - app.js will provide all dynamic behavior: menu interactions, carousel, search, cart, consent, CSV export (only with consent).
        ============================ -->
   <script src="shop.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('menuToggle');
+  const off = document.getElementById('offcanvas');
+  const overlay = document.getElementById('overlay');
+
+  if (!toggle || !off || !overlay) {
+    console.error("Menu toggle elements missing:", {toggle, off, overlay});
+    return;
+  }
+
+  function openPanel() {
+    off.classList.remove('hidden');
+    off.classList.add('open');
+    overlay.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closePanel() {
+    off.classList.add('hidden');
+    off.classList.remove('open');
+    overlay.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', function () {
+    if (off.classList.contains('open')) closePanel();
+    else openPanel();
+  });
+
+  overlay.addEventListener('click', closePanel);
+
+  const closeBtn = document.getElementById('closeMenu');
+  if (closeBtn) closeBtn.addEventListener('click', closePanel);
+});
+</script>
+
+
 </body>
 </html>
 

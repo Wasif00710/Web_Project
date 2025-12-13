@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Minion Pet Care</title>
+
+  <!-- Core site styles (existing) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css"> <!-- your main stylesheet (used on index). See project files. -->
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="./about.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Reuse your header (keeps the same nav look as index.html) -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+        <!-- LEFT SIDE: Menu Toggle + Logo -->
+        <button id="menuToggle" class="pill btn icon me-2" aria-label="Open menu" aria-expanded="false">☰</button>
+
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/Logo.png" alt="Minion Pet Care Logo"
+            style="height:70px; width:auto; border-radius:50%; margin-right:10px;">
+          <span class="fw-bold">Minion Pet Care</span>
+        </a>
+
+        <!-- Mobile toggle button (Bootstrap collapse) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- SEARCH BAR (desktop visible) -->
+        <div class="d-none d-lg-flex ms-3 align-items-center">
+          <input id="searchInput" class="pill input" type="search" placeholder="Search products, breeds, food..."
+            aria-label="Search products">
+          <button id="searchBtn" class="pill btn ms-2">Search</button>
+        </div>
+
+        <!-- NAV MENU -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                data-bs-toggle="dropdown">Services</a>
+
+              <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                <li><a class="dropdown-item" href="shop.html">Pet Shop</a></li>
+                <li><a class="dropdown-item" href="trainer.html">Pet Trainer</a></li>
+                <li><a class="dropdown-item" href="ved.html">Pet Veterinarian</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link nav-btn" href="./minion_pet_care/login.html">Login</a></li>
+
+            <!-- Cart Button -->
+            <li class="nav-item ms-lg-2">
+              <button id="cartBtn" class="pill btn" aria-label="Open cart">
+                🛒 Cart <span id="cartCount" class="badge" aria-live="polite">0</span>
+              </button>
+            </li>
+
+            <!-- MOBILE SEARCH (only visible on small screens) -->
+            <li class="nav-item d-lg-none mt-3">
+              <input id="searchInputMobile" class="pill input w-100 mb-2" type="search"
+                placeholder="Search products, breeds, food..." aria-label="Search">
+              <button id="searchBtnMobile" class="pill btn w-100">Search</button>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="about-hero section-padding overlay bg-img-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5">About Minion Pet Care</h1>
+          <p class="lead">We provide loving, professional care for pets — boarding, vet services, training and a
+            friendly pet shop.</p>
+          <a href="contact.html" class="boxed-btn3">Contact Us</a>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="img/about/pet_care.png" alt="pet care" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES -->
+  <section class="section-padding white-bg">
+    <div class="container">
+      <div class="section_title text-center mb-55">
+        <h3>Our Mission</h3>
+        <p>To improve the lives of pets and their owners through compassionate care, expert advice and community
+          outreach.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <div class="single_service text-center">
+            <img src="img/service/service_icon_1.png" alt="" style="height:72px;">
+            <h4 class="mt-3">Compassion</h4>
+            <p>We treat every animal with respect and kindness.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single_service text-center">
+            <img src="img/service/service_icon_2.png" alt="" style="height:72px;">
+            <h4 class="mt-3">Expertise</h4>
+            <p>Veterinarians and trainers with real experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single_service text-center">
+            <img src="img/service/service_icon_3.png" alt="" style="height:72px;">
+            <h4 class="mt-3">Community</h4>
+            <p>We support adoption and local pet welfare initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <!-- team_area_start  -->
+  <div class="team_area">
+    <div class="container">
+      <div class="row justify-content-center ">
+        <div class="col-lg-6 col-md-10">
+          <div class="section_title text-center mb-95">
+            <h3>Our Team</h3>
+            <p>They very people who are work in this Field for Better future of Pet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="single_team">
+            <div class="thumb">
+              <img
+                src="https://raw.githubusercontent.com/Wasif00710/SP-3-Project/refs/heads/main/IMG_5687_com%20(1)%20(1).png"
+                alt="Wasikur Chodhury Wasif">
+            </div>
+            <div class="member_name text-center">
+              <div class="mamber_inner">
+                <h4>Wasikur Chodhury Wasif</h4>
+                <p>Senior Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single_team">
+            <div class="thumb">
+              <img
+                src="https://scontent.fdac7-1.fna.fbcdn.net/v/t39.30808-6/467342021_9103298046400221_870473802147648569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEYd3271hx4qh0foW9G9gPo4AG5f_dMd8bgAbl_90x3xilRwSS2R9XcHPuVSvrciM6tY6Me3S_YtIrRaWG2Wy8J&_nc_ohc=GhulOpDR0TMQ7kNvwGkYZNH&_nc_oc=AdmguW6GnkztuPY3p8fkigGMaP7HOLs0drJKDnJ2MMc6R38pzlC3WIlki4UYoX9n1fE&_nc_zt=23&_nc_ht=scontent.fdac7-1.fna&_nc_gid=caT5jmK0BgFMsfdAUthwgQ&oh=00_Afn5N8hYLR2hiM2z3r_C5NLJZ_wIuxnwkkIZnKXkYGCULw&oe=693E4610"
+                alt="">
+            </div>
+            <div class="member_name text-center">
+              <div class="mamber_inner">
+                <h4>Durjoy Alam Chowdhury</h4>
+                <p>Senior Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="single_team">
+            <div class="thumb">
+              <img src="https://avatars.githubusercontent.com/u/179880730?v=4" alt="">
+            </div>
+            <div class="member_name text-center">
+              <div class="mamber_inner">
+                <h4>Israt Habiba Eva</h4>
+                <p>Senior Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_team">
+              <div class="thumb">
+                <img
+                  src="https://scontent.fdac41-1.fna.fbcdn.net/v/t39.30808-6/559416760_1295419885390407_992695671392965445_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGP1VEl-O3_c12yvZqQFMU5sz6sUaePDnezPqxRp48Od6exkjtsjwHFZ8Gr8Ezn-PsS4cyRTBZqQaXhoUOtFNNQ&_nc_ohc=XxPfTq3BkLEQ7kNvwGfArv6&_nc_oc=Adm1kHd5_AMLyzAnKQV3qtfCJ80PKdJi9zFhyJLAUxzEo2unpLZtVj5eufrlMAh420M&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=XO6fd88qToR_3mhHUODHtg&oh=00_Afk3I3lMWc2KZlNyFuf3UuUro1BioPfGMJxmaw258m8biQ&oe=693E6A04"
+                  alt="">
+              </div>
+              <div class="member_name text-center">
+                <div class="mamber_inner">
+                  <h4>Dipa Rani</h4>
+                  <p>Senior Director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="section-padding overlay bg-img-2">
+      <div class="container">
+        <div class="row text-center gy-4">
+          <div class="col-md-4">
+            <div class="counter-box">
+              <h2 class="counter" data-target="452">0</h2>
+              <p>Pets Helped</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="counter-box">
+              <h2 class="counter" data-target="120">0</h2>
+              <p>Adoptions</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="counter-box">
+              <h2 class="counter" data-target="52">0</h2>
+              <p>Professional Staff</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (keep simple; you can paste your site footer here) -->
+    <!-- footer_start  -->
+    <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Contact Us</h3>
+                <ul class="address_line">
+                  <li>+8801963929839</li>
+                  <li><a href="#">minionpetcare@gmail.com</a></li>
+                  <li>Daffodil Smart City</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Our Services</h3>
+                <ul class="links">
+                  <li><a href="#">Pet Training</a></li>
+                  <li><a href="#">Pet Boarding</a></li>
+                  <li><a href="#">Pet Adoption</a></li>
+                  <li><a href="#">Pet Veterinarian</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <h3 class="footer_title">Quick Link</h3>
+                <ul class="links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="./login.html">Login info</a></li>
+                  <li><a href="#">Contect us</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-lg-3">
+              <div class="footer_widget">
+                <div class="footer_logo">
+                  <a href="#">
+                    <img src="img/Logo.png" alt="Minion Pet Care Logo" class="center-logo"
+                      style="height:180px; width:auto; border-radius:70%;">
+                  </a>
+                </div>
+                <p class="center_text">Daffodil Smart City,<br> Asulia, Savar</p>
+                <div class="socail_links">
+                  <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="copy-right_text">
+        <div class="container">
+          <div class="bordered_1px"></div>
+          <p class="copy_right text-center">
+            Copyright ©
+            <script>document.write(new Date().getFullYear());</script>
+            All rights reserved |
+            <i class="ti-heart"></i> by <a href="./index.html" target="_blank">Minion Pet Care</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Page scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./about.js"></script>
+</body>
+
+</html>
