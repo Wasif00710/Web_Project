@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.top = 0;
       modal.style.width = '100%';
       modal.style.height = '100%';
-      modal.style.background = 'rgba(0,0,0,0.6)';
+      modal.style.background = 'rgba(255, 255, 255, 1)';
       modal.style.display = 'flex';
       modal.style.alignItems = 'center';
       modal.style.justifyContent = 'center';
