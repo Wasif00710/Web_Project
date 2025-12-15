@@ -39,7 +39,7 @@
 }
 
 /* COUNTERS */
-.counter-box { padding: 30px; color: #fff; }
+.counter-box { padding: 30px; color: #ffffff; }
 .counter { font-size: 40px; font-weight: 700; margin-bottom: 8px; }
 
 /* responsive spacing */
@@ -171,7 +171,7 @@
   padding: 70px 0;
 }
 .contact_cta h3 {
-  color: #155104;
+  color: #f8fff6;
   font-size: 28px;
   font-weight: 700;
 }
@@ -375,4 +375,31 @@ body.panel-open { overflow: hidden !important; }
 /* Hide offcanvas on large screens if you prefer desktop nav only */
 @media (min-width: 992px) {
   #offcanvas, .offcanvas-backdrop-custom { display: none !important; }
+}
+/* FORCE WHITE TEXT FOR COUNTER SECTION */
+.section-padding.overlay.bg-img-2 {
+  color: #ffffff;
+}
+
+.section-padding.overlay.bg-img-2 h2,
+.section-padding.overlay.bg-img-2 p,
+.section-padding.overlay.bg-img-2 span {
+  color: #ffffff !important;
+}
+/* COUNTER SECTION – LIGHT GREEN GRADIENT */
+.counter_area {
+  background: linear-gradient(
+    to right,
+    #046015,   /* light green */
+    #21d211bc,   /* soft green */
+    #5fcfc6    /* green */
+  );
+  padding: 100px 0;
+}
+
+/* FORCE WHITE TEXT */
+.counter_area,
+.counter_area h2,
+.counter_area p {
+  color: #ffffff !important;
 }

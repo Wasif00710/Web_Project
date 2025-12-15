@@ -177,7 +177,7 @@
   max-width: 480px;
   width: 36vw;
   background: #fff;
-  color: #222;
+  color: #f2f1f1;
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   padding: 8px 14px;
@@ -321,18 +321,7 @@ body.panel-open {
 }
 
 /* ===== Glassmorphism container ===== */
-.login-container {
-    width: 500px;
-    padding: 40px 30px;
-    border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.15);     /* transparent white */
-    backdrop-filter: blur(10px);               /* glass blur */
-    -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-}
 
 /* ===== Form styling ===== */
 .login-container h1 {

@@ -7218,3 +7218,14 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* =========================
+   CART — FORCE ABOVE HEADER
+   ========================= */
+.cart-drawer {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 100000 !important; /* higher than header & overlay */
+}
+
